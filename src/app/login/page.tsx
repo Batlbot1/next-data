@@ -1,5 +1,10 @@
 import Link from "next/link";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+  title: "Login page",
+  description: "Login",
+};
 export default function login() {
   return (
     <main className="flex justify-center items-center min-h-screen ml-40 mr-5 pt-10">

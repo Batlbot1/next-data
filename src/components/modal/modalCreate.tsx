@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Button} from "@nextui-org/button";
 
+
 export default function ModalCreate({ isOpen, onOpenChange, addFolder }) {
   const [folderName, setFolderName] = useState("");
   const dataToFolder = () => {
@@ -15,7 +16,7 @@ export default function ModalCreate({ isOpen, onOpenChange, addFolder }) {
 
 	  {isOpen && (
 		  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" >
-			<div className="w-52 h-52 bg-white rounded-lg flex flex-col items-center justify-center p-4">
+			<div className="w-72 h-52 bg-white rounded-lg flex flex-col items-center justify-center p-4">
 			  <h1 className="text-black mb-4" >New Folder</h1>
 			  <input
 				  type="text"

@@ -11,6 +11,7 @@ import {useState} from "react";
 import ModalCreate from "@/components/modal/modalCreate";
 import {useDisclosure} from "@nextui-org/react";
 import {Button} from "@nextui-org/button";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -47,7 +48,7 @@ export default function Home() {
         <h1 className="text-left mb-4">All files</h1>
         <div className="flex flex-wrap justify-center items-center gap-4">
           {folders.map((item, index) =>(
-              <Folder key={index} nameFolder={item.nameFolder}/>
+              <Link href={`/folder/${item.nameFolder}`} ><Folder key={index} nameFolder={item.nameFolder}/></Link>
           ))}
 
           {files.map((item, index) => (
